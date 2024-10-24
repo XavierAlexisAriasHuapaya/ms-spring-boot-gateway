@@ -31,15 +31,17 @@ public class GatewayConfig {
                                                 .uri("lb://ms-maintenance-proxy"))
                                 .route(route -> route.path("/proxy-report-maintenance/**")
                                                 .uri("lb://ms-maintenance-report-proxy"))
-                                // .route(route -> route.path("/proxy-sale/**")
-                                //                 .uri("lb://digital-peru-proxy-sale"))
+
+                                .route(route -> route.path("/proxy-sale/**")
+                                                .uri("lb://ms-sale-proxy"))
 
                                 .route(route -> route.path("/api/maintenance/**")
                                                 .uri("lb://ms-maintenance"))
                                 .route(route -> route.path("/api/report/maintenance/**")
                                                 .uri("lb://ms-maintenance-report"))
-                                // .route(route -> route.path("/api/sale/**")
-                                //                 .uri("lb://digital-peru-sale"))
+
+                                .route(route -> route.path("/api/sale/**")
+                                                .uri("lb://ms-sale"))
                                 .build();
         }
 
