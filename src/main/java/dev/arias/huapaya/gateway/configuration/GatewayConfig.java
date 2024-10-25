@@ -34,6 +34,8 @@ public class GatewayConfig {
 
                                 .route(route -> route.path("/proxy-sale/**")
                                                 .uri("lb://ms-sale-proxy"))
+                                .route(route -> route.path("/proxy-report-sale/**")
+                                                .uri("lb://ms-sale-report-proxy"))
 
                                 .route(route -> route.path("/api/maintenance/**")
                                                 .uri("lb://ms-maintenance"))
